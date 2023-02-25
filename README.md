@@ -6,6 +6,7 @@ A collection of scripts and workflows to assess HiFi metagenomics assembly quali
 - biopython
 - metabat2
 - checkm
+- minimap2 2.24+
 
 # Circular contigs
 Compute the number of circular contigs in an assembly, and their quality with checkM.
