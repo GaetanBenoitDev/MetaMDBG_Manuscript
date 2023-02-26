@@ -52,7 +52,7 @@ After successful execution, the file "outputDir/checkm/\_\_checkm/binScore.csv" 
 Map contigs to references and compute the number of contigs required to cover at least 99% of the references.
 
 ```
-python3 ./computeReferenceCompleteness.py referenceFile contigs.fasta.gz contigs.fasta.gz mdbg tmpDir minCompleteness nbCores
+python3 ./computeReferenceCompleteness.py referenceFile contigs.fasta.gz contigs.fasta.gz mdbg tmpDir 0.99 nbCores
 ```
 "referenceFile" contains the list of reference filenames, one filename per line.
 The result file tmpDir/results.txt provides the following information for each reference:
