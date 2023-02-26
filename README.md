@@ -10,7 +10,7 @@ A collection of scripts and workflows to assess HiFi metagenomics assembly quali
 - wfmash
 - pyani
 
-# Circular contigs
+# Assess circular contigs
 Compute the number of circular contigs in an assembly, and their quality with checkM.
 ```
 MetaMDBG:
@@ -32,7 +32,7 @@ Single contigs non-circular MAGs: 24 18 16    1 (near-complete, high-quality, me
 Single contigs circular MAGs: 16 2 0    0 (near-complete, high-quality, medium-quality, contaminated)
 ```
 
-# Non-circular MAGs (binning)
+# Assess non-circular MAGs (binning)
 Reconstruct non-circular MAGs using metabat2, and assess their quality with checkM.
 ```
 MetaMDBG:
