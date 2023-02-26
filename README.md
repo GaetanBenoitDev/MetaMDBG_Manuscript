@@ -7,6 +7,8 @@ A collection of scripts and workflows to assess HiFi metagenomics assembly quali
 - metabat2
 - checkm
 - minimap2 2.24+
+- wfmash
+- pyani
 
 # Circular contigs
 Compute the number of circular contigs in an assembly, and their quality with checkM.
@@ -46,4 +48,15 @@ python3 ./computeMAG_binning.py outputDir contigs.fasta.gz assembly_info.txt met
 After successful execution, the file "outputDir/checkm/\_\_checkm/binScore.csv" contains the results with the following format:
 49 41 19    83 (near-complete, high-quality, medium-quality, contaminated)
 
-# Reference completeness
+# Assess assembly completeness and fragmentation with reference sequences
+Map contigs to references and compute the number of contigs required to cover at least 99% of the references.
+
+```
+python3 ./computeReferenceCompleteness.py referenceFile contigs.fasta.gz contigs.fasta.gz mdbg tmpDir minCompleteness nbCores
+```
+"referenceFile" contains the list of reference filenames, one filename per line.
+The result file tmpDir/results.txt provides the following information for each reference:
+```
+ReferenceName (number of contig of reference): [Assembly status: circular| number of contigs] completeness ANI_with_reference
+Staphylococcus_aureus_ATCC_BAA_1556 (1 contigs):  circular 0.9991514199561156 0.999987844786959
+```
